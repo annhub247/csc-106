@@ -27,9 +27,10 @@
       <span class="flower f5">✿</span>
       <span class="flower f6">❀</span>
     </div>
+
     <!-- Navigation -->
     <nav class="navbar flex-row">
-      <div class="logo" onclick="navigate('home', this)">
+      <div class="logo" role="button" tabindex="0" onclick="navigate('home', this)">
         Maryann C<span class="accent">.</span>
       </div>
 
@@ -55,17 +56,17 @@
 
       <ul class="nav-icons flex-row">
         <li>
-          <a href="mailto:c.obiajulu@miva.edu.ng" target="_blank"
+          <a href="mailto:c.obiajulu@miva.edu.ng" target="_blank" rel="noopener noreferrer" aria-label="Email"
             ><span class="material-symbols-outlined">mail</span></a
           >
         </li>
         <li>
-          <a href="https://github.com/maryann" target="_blank"
+          <a href="https://github.com/maryann" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
             ><span class="material-symbols-outlined">code</span></a
           >
         </li>
         <li>
-          <a href="https://linkedin.com/in/maryann" target="_blank"
+          <a href="https://linkedin.com/in/maryann" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
             ><span class="material-symbols-outlined">work</span></a
           >
         </li>
@@ -73,11 +74,12 @@
     </nav>
 
     <main class="container">
+      <!-- HOME PAGE -->
       <section id="home" class="page active">
         <div class="hero simple-hero flex-row">
           <img
             src="./rsz_1000373095.jpg"
-            alt="Student Photo"
+            alt="Student Profile Photo"
             class="profile-pic"
           />
 
@@ -87,28 +89,21 @@
             </h1>
             <p class="hero-bio">
               Hello! I am Nelly Ann, a Computer Science student passionate about
-              technology, proramming and web development. I enjoy leaarning new
+              technology, programming, and web development. I enjoy learning new
               skills and building beautiful websites.
             </p>
             <button
               class="btn outline-btn"
-              style="padding: 0.5rem 1rem; margin-top: 0.5rem"
-              onclick="
-                navigate(
-                  'contact',
-                  document.querySelectorAll('.nav-links a')[4],
-                )
-              "
+              onclick="navigate('contact', document.querySelectorAll('.nav-links a')[4])"
             >
-              <span class="material-symbols-outlined" style="font-size: 18px"
-                >mail</span
-              >
-              say hi <3
+              <span class="material-symbols-outlined">mail</span>
+              say hi &lt;3
             </button>
           </div>
         </div>
       </section>
 
+      <!-- ABOUT PAGE -->
       <section id="about" class="page">
         <div class="section-heading-container">
           <h2 class="section-title">/ about me</h2>
@@ -118,29 +113,32 @@
         <div class="about-grid flex-row">
           <div class="card flex-1">
             <h3>Educational Background</h3>
-            <table class="styled-table">
-              <thead>
-                <tr>
-                  <th>Year</th>
-                  <th>Institution</th>
-                  <th>Degree</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>2024 - Present</td>
-                  <td>MIVA Open University</td>
-                  <td>BSc. CS</td>
-                </tr>
-              </tbody>
-            </table>
+            <!-- Wrapper enables standard touch overflow-scrolling on responsive displays -->
+            <div class="table-wrapper">
+              <table class="styled-table">
+                <thead>
+                  <tr>
+                    <th>Year</th>
+                    <th>Institution</th>
+                    <th>Degree</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2024 - Present</td>
+                    <td>MIVA Open University</td>
+                    <td>BSc. CS</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
           <div class="card flex-1">
             <h3>Career Aspirations</h3>
             <p>
-              My goal is to become a proffesional software developer aand build
-              websites and applications that solves real-world problems. I am
+              My goal is to become a professional software developer and build
+              websites and applications that solve real-world problems. I am
               particularly interested in web development, and I aspire to work
               with a team of talented developers to create innovative solutions.
             </p>
@@ -158,14 +156,15 @@
         </div>
       </section>
 
+      <!-- PROJECTS PAGE -->
       <section id="projects" class="page">
         <div class="section-heading-container">
           <h2 class="section-title">/ projects</h2>
           <div class="heading-line"></div>
         </div>
-        <div class="projects-container flex-row">
+        <div class="projects-grid">
           <article class="card project-card flex-col">
-            <img src="https://picsum.photos/id/1/300/200" alt="Project 1" />
+            <img src="https://picsum.photos/id/1/300/200" alt="E-Commerce Interface Concept Screenshot" loading="lazy" />
             <h3>E-Commerce UI</h3>
             <p>
               A responsive frontend for an online store featuring product
@@ -173,14 +172,12 @@
             </p>
             <a href="#" class="accent-link"
               >View source
-              <span class="material-symbols-outlined" style="font-size: 14px"
-                >arrow_outward</span
-              ></a
+              <span class="material-symbols-outlined">arrow_outward</span></a
             >
           </article>
 
           <article class="card project-card flex-col">
-            <img src="https://picsum.photos/id/2/300/200" alt="Project 2" />
+            <img src="https://picsum.photos/id/2/300/200" alt="Weather Application Dashboard View" loading="lazy" />
             <h3>Weather App</h3>
             <p>
               A JS-powered app fetching real-time weather data via public API
@@ -188,14 +185,12 @@
             </p>
             <a href="#" class="accent-link"
               >View source
-              <span class="material-symbols-outlined" style="font-size: 14px"
-                >arrow_outward</span
-              ></a
+              <span class="material-symbols-outlined">arrow_outward</span></a
             >
           </article>
 
           <article class="card project-card flex-col">
-            <img src="https://picsum.photos/id/3/300/200" alt="Project 3" />
+            <img src="https://picsum.photos/id/3/300/200" alt="Academic Productivity Planner Workspace" loading="lazy" />
             <h3>Academic Planner</h3>
             <p>
               A web-based productivity tool to track assignments, built with
@@ -203,14 +198,13 @@
             </p>
             <a href="#" class="accent-link"
               >View source
-              <span class="material-symbols-outlined" style="font-size: 14px"
-                >arrow_outward</span
-              ></a
+              <span class="material-symbols-outlined">arrow_outward</span></a
             >
           </article>
         </div>
       </section>
 
+      <!-- PLANNER PAGE -->
       <section id="planner" class="page">
         <div class="section-heading-container">
           <h2 class="section-title">/ planner</h2>
@@ -226,11 +220,12 @@
             <button onclick="addTask()" class="btn accent-btn">Add Task</button>
           </div>
           <ul id="taskList" class="task-list flex-col">
-            <!-- Tasks injected here -->
+            <!-- Tasks dynamically injected via JS -->
           </ul>
         </div>
       </section>
 
+      <!-- CONTACT PAGE -->
       <section id="contact" class="page">
         <div class="section-heading-container">
           <h2 class="section-title">/ contact</h2>
@@ -240,7 +235,7 @@
           <form id="contactForm" class="flex-col">
             <div class="form-group flex-col">
               <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="John Doe" />
+              <input type="text" id="name" name="name" placeholder="John Doe" required />
             </div>
 
             <div class="form-group flex-col">
@@ -250,6 +245,7 @@
                 id="email"
                 name="email"
                 placeholder="john@example.com"
+                required
               />
             </div>
 
@@ -271,17 +267,22 @@
                 name="message"
                 rows="4"
                 placeholder="Hello..."
+                required
               ></textarea>
             </div>
 
             <div id="formStatus" class="form-status"></div>
-            <button type="submit" class="btn outline-btn" style="width: 100%">
+            <button type="submit" class="btn outline-btn" style="width: 100%;">
               Send Message
             </button>
           </form>
         </div>
       </section>
     </main>
+
+    <footer>
+      <p>&copy; 2026 Maryann C. Built with love.</p>
+    </footer>
 
     <script src="script.js"></script>
   </body>
